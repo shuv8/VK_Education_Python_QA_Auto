@@ -1,0 +1,31 @@
+name: Homework workflow
+on:
+  push:
+    branches:
+      - 'homework3'
+      - 'homework7'
+  workflow_dispatch:
+jobs:
+  HomeworkFlow:
+    runs-on: ubuntu-latest
+    timeout-minutes: 2
+    steps:
+    - uses: actions/checkout@v2
+    - name: Extract branch name
+      shell: bash
+      run: echo "##[set-output name=branch;]$(echo ${GITHUB_REF#refs/heads/})"
+      id: extract_branch
+    - name: Set up Python 3.10
+      uses: actions/setup-python@v2
+      with:
+        python-version: "3.10"
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install pylint
+        pip install -r requirements.txt
+    - name: Run pytest
+      if: github.ref_name == 'homework3' ||
+          github.ref_name == 'homework7'
+      run: |
+        pytest ${{ steps.extract_branch.outputs.branch }} -n2

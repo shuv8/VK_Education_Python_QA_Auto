@@ -1,0 +1,7 @@
+runOnDraft: true
+addAssignees: true
+
+numberOfAssignees: 1
+
+assignees:
+  - educationvkpython
