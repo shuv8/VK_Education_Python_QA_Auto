@@ -19,7 +19,7 @@ def config(request):
 def driver(config):
     options = Options()
     options.headless = config["headless"]
-    driver = webdriver.Chrome(executable_path=ChromeDriverManager().install(), options=options)
+    driver = webdriver.Chrome(executable_path=ChromeDriverManager(version="105.0.5195.19").install(), options=options)
     driver.maximize_window()
     yield driver
     driver.quit()
@@ -41,7 +41,7 @@ def credentials(repo_root):
 @pytest.fixture()
 def data_test():
     data = {"name": rstr.xeger('[А-Я][а-я]{2,15}'),
-            "phone": rstr.xeger('\+79[0-9]{9}')}
+            "phone": rstr.xeger('\\+79[0-9]{9}')}
     return data
 
 
