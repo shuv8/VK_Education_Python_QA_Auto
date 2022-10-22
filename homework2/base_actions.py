@@ -1,5 +1,8 @@
+"""Module with base actions for tests"""
+
 import pytest
 from _pytest.fixtures import FixtureRequest
+
 from ui.pages.base_page import BasePage
 from ui.pages.auth_page import AuthPage
 from ui.pages.campaigns_page import CampaignsPage
@@ -8,6 +11,8 @@ from ui.pages.segments_page import SegmentsPage
 
 
 class BaseCase:
+    """Class with basic actions for tests"""
+
     driver = None
     config = None
     logger = None
@@ -19,6 +24,8 @@ class BaseCase:
 
     @pytest.fixture(scope='function', autouse=True)
     def setup(self, driver, config, logger, request: FixtureRequest):
+        """Setup all needed attributes of Base case"""
+
         self.driver = driver
         self.config = config
         self.logger = logger
