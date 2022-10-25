@@ -96,3 +96,71 @@ class SegmentsPage(BasePage):
             self.click_btn(locator, timeout=15)
         self.click_btn(self.locators.DELETE_CONFIRM_BUTTON)
         self.logger.info(f'Source group {name} deleted successfully')
+
+    @allure.step('Segment name assertion...')
+    def check(self, name, segment_id):
+        """Check if specified segment is created successfully
+
+        :param name:
+        :param segment_id:
+        :return:
+        """
+
+        locator = (By.XPATH, f'//a[contains(@href, "{segment_id}")]')
+        try:
+            self.logger.info('Asserting created segment name')
+            assert self.find(locator).text == name
+        finally:
+            pass
+
+    @allure.step('Segment delete assertion...')
+    def delete_check(self, segment_id):
+        """Check if specified segment is deleted
+
+        :param segment_id:
+        :return:
+        """
+
+        locator = (By.XPATH, f'//a[contains(@href, "{segment_id}")]')
+        self.logger.info('Asserting segment is deleted')
+        try:
+            assert self.find(locator, 3)
+        except TimeoutException:
+            pass
+
+    @allure.step('Segment name assertion...')
+    def check_with_group(self, name, segment_id, group_name):
+        """Check if specified segment with group source is created successfully
+
+        :param name:
+        :param segment_id:
+        :param group_name:
+        :return:
+        """
+
+        locator = (By.XPATH, f'//a[contains(@href, "{segment_id}")]')
+        try:
+            self.logger.info('Asserting created segment name')
+            assert self.find(locator).text == name
+            self.click_btn(locator)
+            with allure.step('Group name in source assertion...'):
+                self.logger.info('Asserting created segment source')
+                assert group_name in self.find(
+                    self.locators.SEGMENT_SOURCE).text
+        finally:
+            pass
+
+    @allure.step('Group source delete assertion...')
+    def delete_group_check(self, group_name):
+        """Check if specified group is deleted
+
+        :param group_name:
+        :return:
+        """
+
+        self.logger.info('Asserting source group is deleted')
+        try:
+            assert self.find(
+                self.locators.GROUP_IN_LIST, 3).text == group_name
+        except TimeoutException:
+            pass
