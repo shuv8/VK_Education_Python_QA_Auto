@@ -1,0 +1,84 @@
+Total number of requests:
+225133
+
+Total number of requests by type:
+GET - 122095
+POST - 102503
+HEAD - 528
+PUT - 6
+
+Top 10 most frequent requests:
+PATH: /administrator/index.php
+Number of requests: 106288
+-
+PATH: /apache-log/access.log
+Number of requests: 26439
+-
+PATH: /
+Number of requests: 6968
+-
+PATH: /templates/_system/css/general.css
+Number of requests: 4980
+-
+PATH: /robots.txt
+Number of requests: 3199
+-
+PATH: /favicon.ico
+Number of requests: 2201
+-
+PATH: /wp-login.php
+Number of requests: 1648
+-
+PATH: /administrator/
+Number of requests: 1563
+-
+PATH: /templates/jp_hotel/css/template.css
+Number of requests: 1287
+-
+PATH: /media/system/js/mootools.js
+Number of requests: 1278
+-
+
+Top 5 largest requests with (4XX) error:
+PATH: /index.php?option=com_phocagallery&view=category&id=7806&Itemid=53
+Response code: 404
+Size: 1417
+IP: 189.217.45.73
+-
+PATH: /index.php?option=com_phocagallery&view=category&id=4025&Itemid=53
+Response code: 404
+Size: 1417
+IP: 189.217.45.73
+-
+PATH: /index.php?option=com_phocagallery&view=category&id=%28SELECT%20%28CASE%20WHEN%20%289168%3D4696%29%20THEN%209168%20ELSE%209168%2A%28SELECT%209168%20FROM%20INFORMATION_SCHEMA.CHARACTER_SETS%29%20END%29%29&Itemid=53
+Response code: 404
+Size: 1417
+IP: 189.217.45.73
+-
+PATH: /index.php?option=com_phocagallery&view=category&id=%28SELECT%20%28CASE%20WHEN%20%281753%3D1753%29%20THEN%201753%20ELSE%201753%2A%28SELECT%201753%20FROM%20INFORMATION_SCHEMA.CHARACTER_SETS%29%20END%29%29&Itemid=53
+Response code: 404
+Size: 1417
+IP: 189.217.45.73
+-
+PATH: /index.php?view=videos&type=member&user_id=66+and+1=0+union+select+1,2,3,4,5,6,7,8,9,10,11,12,concat%280x3c757365723e,username,0x3c757365723e3c706173733e,password,0x3c706173733e%29,14,15,16,17,18,19,20,21,22,23,24,25,26+from+jos_users+where+gid=25+limit+0,1--&option=com_mytube
+Response code: 404
+Size: 1397
+IP: 5.206.77.93
+-
+
+Top 5 users by number of requests with (5XX) error:
+IP: 189.217.45.73
+Number of requests: 225
+-
+IP: 82.193.127.15
+Number of requests: 4
+-
+IP: 91.210.145.36
+Number of requests: 3
+-
+IP: 198.38.94.207
+Number of requests: 2
+-
+IP: 195.133.48.198
+Number of requests: 2
+-
