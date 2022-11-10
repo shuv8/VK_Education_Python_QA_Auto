@@ -1,0 +1,72 @@
+{
+   "Number of requests by type": {
+      "GET": 122095,
+      "POST": 102503,
+      "HEAD": 528,
+      "PUT": 6
+   },
+   "Top 10 most frequent requests": [
+      {
+         "PATH": "/administrator/index.php",
+         "Number of requests": 106288
+      },
+      {
+         "PATH": "/apache-log/access.log",
+         "Number of requests": 26439
+      },
+      {
+         "PATH": "/",
+         "Number of requests": 6968
+      },
+      {
+         "PATH": "/templates/_system/css/general.css",
+         "Number of requests": 4980
+      },
+      {
+         "PATH": "/robots.txt",
+         "Number of requests": 3199
+      },
+      {
+         "PATH": "/favicon.ico",
+         "Number of requests": 2201
+      },
+      {
+         "PATH": "/wp-login.php",
+         "Number of requests": 1648
+      },
+      {
+         "PATH": "/administrator/",
+         "Number of requests": 1563
+      },
+      {
+         "PATH": "/templates/jp_hotel/css/template.css",
+         "Number of requests": 1287
+      },
+      {
+         "PATH": "/media/system/js/mootools.js",
+         "Number of requests": 1278
+      }
+   ],
+   "Top 5 users by number of requests with (5XX) error": [
+      {
+         "IP": "189.217.45.73",
+         "Number of requests": 225
+      },
+      {
+         "IP": "82.193.127.15",
+         "Number of requests": 4
+      },
+      {
+         "IP": "91.210.145.36",
+         "Number of requests": 3
+      },
+      {
+         "IP": "194.87.237.6",
+         "Number of requests": 2
+      },
+      {
+         "IP": "198.38.94.207",
+         "Number of requests": 2
+      }
+   ]
+}
