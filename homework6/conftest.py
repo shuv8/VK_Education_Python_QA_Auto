@@ -10,7 +10,7 @@ from db.client import MySQLClient
 def pytest_configure(config):
     """Configuration before tests"""
 
-    mysql_client = MySQLClient(user='root', password='pass', db_name='TEST_SQL2')
+    mysql_client = MySQLClient(user='root', password='pass', db_name='TEST_SQL')
     if not hasattr(config, 'workerinput'):
         mysql_client.create_db()
     mysql_client.connect(db_created=True)
