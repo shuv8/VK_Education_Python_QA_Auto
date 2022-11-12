@@ -7,3 +7,4 @@ allure-pytest~=2.11.1
 Appium-Python-Client~=2.7.1
 PyMySQL~=1.0.2
 SQLAlchemy~=1.4.43
+cryptography~=38.0.3
