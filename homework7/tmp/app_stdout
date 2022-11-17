@@ -1,0 +1,14 @@
+INFO:     127.0.0.1:59449 - "GET / HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59451 - "POST /add_user HTTP/1.1" 201 Created
+INFO:     127.0.0.1:59452 - "GET /get_user HTTP/1.1" 400 Bad Request
+INFO:     127.0.0.1:59453 - "GET /get_user?name=Test&surname=Testov HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59455 - "GET /get_user?name=Test&surname=Testov HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59456 - "GET /get_user?name=Test&surname=Testov HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59457 - "POST /add_user HTTP/1.1" 201 Created
+INFO:     127.0.0.1:59458 - "GET /get_user?name=Petr&surname=Testov HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59459 - "POST /add_user HTTP/1.1" 201 Created
+INFO:     127.0.0.1:59460 - "PUT /update_user?name=Ivan&surname=Ivanov HTTP/1.1" 202 Accepted
+INFO:     127.0.0.1:59461 - "GET /get_user?name=Ivan&surname=Ivanov HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59462 - "POST /add_user HTTP/1.1" 201 Created
+INFO:     127.0.0.1:59463 - "DELETE /delete_user HTTP/1.1" 204 No Content
+INFO:     127.0.0.1:59464 - "GET /get_user?name=Delete&surname=Ivanov HTTP/1.1" 404 Not Found

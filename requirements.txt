@@ -6,3 +6,7 @@ pytest-xdist~=2.5.0
 requests~=2.28.1
 allure-pytest~=2.11.1
 Appium-Python-Client~=2.7.1
+Flask~=2.2.2
+fastapi~=0.87.0
+uvicorn~=0.20.0
+pydantic~=1.10.2

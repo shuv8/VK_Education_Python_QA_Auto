@@ -1,0 +1,5 @@
+[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:1234
+[33mPress CTRL+C to quit[0m
+127.0.0.1 - - [24/Nov/2022 20:32:21] "[33mGET / HTTP/1.1[0m" 404 -
+127.0.0.1 - - [24/Nov/2022 20:32:21] "GET /get_age/Test HTTP/1.1" 200 -
