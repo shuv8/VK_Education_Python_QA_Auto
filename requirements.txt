@@ -10,3 +10,6 @@ Flask~=2.2.2
 fastapi~=0.87.0
 uvicorn~=0.20.0
 pydantic~=1.10.2
+PyMySQL~=1.0.2
+SQLAlchemy~=1.4.43
+cryptography~=38.0.3
