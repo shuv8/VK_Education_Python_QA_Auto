@@ -1,0 +1,143 @@
+2022-11-24 20:32:21.637596
+[REQUEST]:
+	Method - POST
+	URL - http://127.0.0.1:5000/add_user
+	Body - b'{"name": "Test", "surname": "Testov"}'
+[RESPONSE]:
+	Response code - 201
+	Headers - {'date': 'Thu, 24 Nov 2022 17:32:21 GMT', 'server': 'uvicorn', 'content-length': '13', 'content-type': 'application/json'}
+	Body - {"user_id":1}
+
+
+2022-11-24 20:32:21.639591
+[REQUEST]:
+	Method - GET
+	URL - http://127.0.0.1:5000/get_user
+	Body - None
+[RESPONSE]:
+	Response code - 400
+	Headers - {'date': 'Thu, 24 Nov 2022 17:32:21 GMT', 'server': 'uvicorn', 'content-length': '51', 'content-type': 'application/json'}
+	Body - "No name or surname provided. Use query parameters"
+
+
+2022-11-24 20:32:21.651323
+[REQUEST]:
+	Method - GET
+	URL - http://127.0.0.1:5000/get_user?name=Test&surname=Testov
+	Body - None
+[RESPONSE]:
+	Response code - 200
+	Headers - {'date': 'Thu, 24 Nov 2022 17:32:21 GMT', 'server': 'uvicorn', 'content-length': '55', 'content-type': 'application/json'}
+	Body - {"user_id":1,"name":"Test","surname":"Testov","age":43}
+
+
+2022-11-24 20:32:21.653258
+[REQUEST]:
+	Method - GET
+	URL - http://127.0.0.1:5000/get_user?name=Test&surname=Testov
+	Body - None
+[RESPONSE]:
+	Response code - 200
+	Headers - {'date': 'Thu, 24 Nov 2022 17:32:21 GMT', 'server': 'uvicorn', 'content-length': '55', 'content-type': 'application/json'}
+	Body - {"user_id":1,"name":"Test","surname":"Testov","age":43}
+
+
+2022-11-24 20:32:21.655204
+[REQUEST]:
+	Method - GET
+	URL - http://127.0.0.1:5000/get_user?name=Test&surname=Testov
+	Body - None
+[RESPONSE]:
+	Response code - 200
+	Headers - {'date': 'Thu, 24 Nov 2022 17:32:21 GMT', 'server': 'uvicorn', 'content-length': '55', 'content-type': 'application/json'}
+	Body - {"user_id":1,"name":"Test","surname":"Testov","age":43}
+
+
+2022-11-24 20:32:21.657018
+[REQUEST]:
+	Method - POST
+	URL - http://127.0.0.1:5000/add_user
+	Body - b'{"name": "Petr", "surname": "Testov", "age": 22}'
+[RESPONSE]:
+	Response code - 201
+	Headers - {'date': 'Thu, 24 Nov 2022 17:32:21 GMT', 'server': 'uvicorn', 'content-length': '13', 'content-type': 'application/json'}
+	Body - {"user_id":2}
+
+
+2022-11-24 20:32:21.659841
+[REQUEST]:
+	Method - GET
+	URL - http://127.0.0.1:5000/get_user?name=Petr&surname=Testov
+	Body - None
+[RESPONSE]:
+	Response code - 200
+	Headers - {'date': 'Thu, 24 Nov 2022 17:32:21 GMT', 'server': 'uvicorn', 'content-length': '55', 'content-type': 'application/json'}
+	Body - {"user_id":2,"name":"Petr","surname":"Testov","age":22}
+
+
+2022-11-24 20:32:21.663082
+[REQUEST]:
+	Method - POST
+	URL - http://127.0.0.1:5000/add_user
+	Body - b'{"name": "Ivan", "surname": "Ivanov", "age": 33}'
+[RESPONSE]:
+	Response code - 201
+	Headers - {'date': 'Thu, 24 Nov 2022 17:32:21 GMT', 'server': 'uvicorn', 'content-length': '13', 'content-type': 'application/json'}
+	Body - {"user_id":3}
+
+
+2022-11-24 20:32:21.664789
+[REQUEST]:
+	Method - PUT
+	URL - http://127.0.0.1:5000/update_user?name=Ivan&surname=Ivanov
+	Body - b'{"age": 22}'
+[RESPONSE]:
+	Response code - 202
+	Headers - {'date': 'Thu, 24 Nov 2022 17:32:21 GMT', 'server': 'uvicorn', 'content-length': '40', 'content-type': 'application/json'}
+	Body - "Users Ivanov Ivan was 33, now it is 22"
+
+
+2022-11-24 20:32:21.666377
+[REQUEST]:
+	Method - GET
+	URL - http://127.0.0.1:5000/get_user?name=Ivan&surname=Ivanov
+	Body - None
+[RESPONSE]:
+	Response code - 200
+	Headers - {'date': 'Thu, 24 Nov 2022 17:32:21 GMT', 'server': 'uvicorn', 'content-length': '55', 'content-type': 'application/json'}
+	Body - {"user_id":3,"name":"Ivan","surname":"Ivanov","age":22}
+
+
+2022-11-24 20:32:21.668767
+[REQUEST]:
+	Method - POST
+	URL - http://127.0.0.1:5000/add_user
+	Body - b'{"name": "Delete", "surname": "Ivanov", "age": 33}'
+[RESPONSE]:
+	Response code - 201
+	Headers - {'date': 'Thu, 24 Nov 2022 17:32:21 GMT', 'server': 'uvicorn', 'content-length': '13', 'content-type': 'application/json'}
+	Body - {"user_id":4}
+
+
+2022-11-24 20:32:21.670288
+[REQUEST]:
+	Method - DELETE
+	URL - http://127.0.0.1:5000/delete_user
+	Body - b'{"name": "Delete", "surname": "Ivanov"}'
+[RESPONSE]:
+	Response code - 204
+	Headers - {'date': 'Thu, 24 Nov 2022 17:32:21 GMT', 'server': 'uvicorn', 'content-type': 'application/json'}
+	Body - 
+
+
+2022-11-24 20:32:21.671711
+[REQUEST]:
+	Method - GET
+	URL - http://127.0.0.1:5000/get_user?name=Delete&surname=Ivanov
+	Body - None
+[RESPONSE]:
+	Response code - 404
+	Headers - {'date': 'Thu, 24 Nov 2022 17:32:21 GMT', 'server': 'uvicorn', 'content-length': '30', 'content-type': 'application/json'}
+	Body - "User Ivanov Delete not found"
+
+
